@@ -13,7 +13,6 @@
           description={product.description}
           src={product.image}
           price={product.price.toString()}
-          featured={product.featured}
         />
       {/each}
     </div>
