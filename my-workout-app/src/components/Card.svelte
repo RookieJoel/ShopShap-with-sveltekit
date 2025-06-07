@@ -1,20 +1,23 @@
 <script lang="ts">
-    export let id: number ;
     export let title: string = '';
     export let description: string = '';
     export let price: string | number = '';
     export let images: string = '';
 </script>
 
-<div class="border border-gray-200 rounded-xl shadow-sm bg-white max-w-xs m-4 transition-shadow hover:shadow-lg overflow-hidden relative">
-    {#if images}
-        <img src={images} alt={title} class="w-full h-44 object-cover block" />
-    {/if}
-    <div class="p-4">
-        <h2 class="m-0 mb-2 text-xl font-semibold">{title}</h2>
-        <p class="m-0 mb-4 text-gray-600 text-base">{description}</p>
-        {#if price}
-            <div class="font-bold text-green-700 text-lg">${price}</div>
-        {/if}
+<div class="max-w-sm rounded overflow-hidden shadow-lg m-4">
+    <img class="w-full" src={images} alt={title}>
+    <div class="px-6 py-4">
+        <div class="font-bold text-xl mb-2">{title}</div>
+        <p class="text-gray-700 text-base">{description}</p>
+    </div>
+    <div class="px-6 pt-4 pb-2">
+        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">${price}</span>
+    </div>
+    <div class="px-6 pt-4 pb-2">
+        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+            Add to Cart
+        </button>
     </div>
 </div>
+
