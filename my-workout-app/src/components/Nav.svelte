@@ -11,6 +11,7 @@
                 <div class="hidden md:block ml-10 ">
                     <div class="flex space-x-4 justify-center">
                         <a href="/" class="text-gray-300 hover:text-sky-300 transition-colors duration-[500ms] px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                        <a href="/products" class="text-gray-300 hover:text-sky-300 transition-colors duration-[500ms] px-3 py-2 rounded-md text-sm font-medium">Products</a>
                         <a href="/workouts" class="text-gray-300 hover:text-sky-300 transition-colors duration-[500ms] px-3 py-2 rounded-md text-sm font-medium">Workouts</a>
                         <a href="/about" class="text-gray-300 hover:text-sky-300 transition-colors duration-[500ms] px-3 py-2 rounded-md text-sm font-medium">About</a>
                     </div>
@@ -33,6 +34,7 @@
     {#if navOpen}
         <div class="md:hidden px-2 pt-2 pb-3 space-y-1">
             <a href="/" class="block text-gray-300 hover:text-sky-300 transition-colors duration-[2000ms] px-3 py-2 rounded-md text-base font-medium">Home</a>
+            <a href="/products" class="block text-gray-300 hover:text-sky-300 transition-colors duration-[2000ms] px-3 py-2 rounded-md text-base font-medium">Products</a>
             <a href="/workouts" class="block text-gray-300 hover:text-sky-300 transition-colors duration-[2000ms] px-3 py-2 rounded-md text-base font-medium">Workouts</a>
             <a href="/about" class="block text-gray-300 hover:text-sky-300 transition-colors duration-[2000ms] px-3 py-2 rounded-md text-base font-medium">About</a>
         </div>

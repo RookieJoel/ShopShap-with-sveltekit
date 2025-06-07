@@ -7,22 +7,22 @@
     title: string;
     description: string;
     price: number;
-    thumbnail: string;
+    images: string;
   };
-  // Use all products for the workout page
   const products: Product[] = data.workouts.products;
 </script>
 
 <SectionWrap>
-  <h1 class="text-3xl font-bold mb-8 text-center">Workout Products</h1>
+  <h1 class="text-4xl font-extrabold mb-10 text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-sky-400 to-indigo-600 drop-shadow-lg tracking-tight">
+    All Products
+  </h1>
   <div class="flex flex-wrap justify-center">
-    {#each products as {id, title, description, price, thumbnail}}
+    {#each products as {id, title, description, price, images}}
       <Card
-        id={id}
         title={title}
         description={description}
         price={price}
-        thumbnail={thumbnail}
+        images={images}
       />
     {/each}
   </div>

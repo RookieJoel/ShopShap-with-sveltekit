@@ -2,8 +2,14 @@
   import Hero from "../components/Hero.svelte";
   import Card from "../components/Card.svelte";
   import SectionWrap from "../components/SectionWrap.svelte";
+  import { onMount } from "svelte";
   export let data;
   // console.log("Data:", data.workouts.products);
+
+  onMount(() => {
+    console.log("Component mounted, data loaded:", data.workouts.products);
+  });
+
   type Product = {
   id: number;
   title: string;
