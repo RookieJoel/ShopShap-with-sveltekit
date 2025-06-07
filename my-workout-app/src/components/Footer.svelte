@@ -2,15 +2,15 @@
     const year = new Date().getFullYear();
 </script>
 
-<footer class="bg-gradient-to-r from-blue-800 to-indigo-900 text-white py-8 px-4 text-center w-full shadow-[0_-2px_16px_rgba(0,0,0,0.10)]">
+<footer class="bg-gray-800 text-white py-8 px-4 text-center w-full shadow-[0_-2px_16px_rgba(0,0,0,0.10)]">
     <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
         <div class="flex items-center gap-3 justify-center">
             <svg class="w-7 h-7 text-blue-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M9 17v-2a4 4 0 014-4h2a4 4 0 014 4v2M7 7a4 4 0 018 0v2a4 4 0 01-8 0V7z" />
             </svg>
-            <span class="font-semibold text-xl tracking-wide">Gym <span class="text-sky-300 font-extrabold">Jum</span></span>
+            <span class="font-semibold text-xl tracking-wide">Shop <span class="text-sky-300 font-extrabold">Shap</span></span>
         </div>
-        <p class="text-sm text-gray-300">&copy; {year} Gym Jum. All rights reserved.</p>
+        <p class="text-sm text-gray-300">&copy; {year} Shop Shap. All rights reserved.</p>
         <div class="flex gap-4 justify-center mt-2 md:mt-0">
             <a href="https://github.com/RookieJoel" target="_blank" rel="noopener" class="hover:text-blue-400 transition-colors" title="GitHub">
                 <svg class="w-6 h-6 inline" fill="currentColor" viewBox="0 0 24 24">

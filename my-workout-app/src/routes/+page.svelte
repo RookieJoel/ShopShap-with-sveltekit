@@ -5,11 +5,6 @@
   import { onMount } from "svelte";
   export let data;
   // console.log("Data:", data.workouts.products);
-
-  onMount(() => {
-    console.log("Component mounted, data loaded:", data.workouts.products);
-  });
-
   type Product = {
   id: number;
   title: string;
@@ -18,14 +13,22 @@
   images: string;
 };
 
-const products: Product[] = data.workouts.products.slice(0,5);
+const products: Product[] = data.workouts.products.slice(0,4);
 
-  // console.log("Data loaded:", products);
+  onMount(() => {
+    console.log("Component mounted, data loaded:", data.workouts.products);
+  });
 
 </script>
 
 <Hero />
-<SectionWrap> 
+
+<section class=" bg-sky-950 text-white">
+  <h1 class="py-5 text-4xl font-extrabold  text-center">
+    New Arrivals
+  </h1>
+</section>
+<section class="bg-gray-100 py-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
   {#each products as {id, title, description, price, images}}
   <Card
     title={title}
@@ -34,7 +37,8 @@ const products: Product[] = data.workouts.products.slice(0,5);
     images={images}
   />
 {/each}
-</SectionWrap>
+</section>
+
 
 
 
