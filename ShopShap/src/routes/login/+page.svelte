@@ -1,4 +1,3 @@
-```svelte
 <script lang="ts">
   let email = '';
   let password = '';
