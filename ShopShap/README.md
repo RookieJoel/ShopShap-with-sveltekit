@@ -36,3 +36,11 @@ npm run build
 You can preview the production build with `npm run preview`.
 
 > To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+
+## Environment variables
+
+Set the `MONGODB_URI` variable to your MongoDB connection string before running the development server:
+
+```bash
+export MONGODB_URI="mongodb://localhost:27017/"
+```
