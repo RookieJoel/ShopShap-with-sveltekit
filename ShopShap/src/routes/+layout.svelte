@@ -1,10 +1,8 @@
-<script> 
-    import "../app.css";
-  import Hero from "../components/Hero.svelte";
+<script lang="ts"> 
+  import "../app.css";
   import Nav from "../components/Nav.svelte";
-  import Header from "../components/Nav.svelte";
   import Footer from "../components/Footer.svelte";
-  export let data: { user: string | null };
+  export let data ;
 </script>
 
 <Nav user={data.user} />
