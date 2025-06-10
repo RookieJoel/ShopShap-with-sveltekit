@@ -19,6 +19,7 @@
   <div class="flex flex-wrap justify-center">
     {#each products as {id, title, description, price, images}}
       <Card
+        {id}
         title={title}
         description={description}
         price={price}
