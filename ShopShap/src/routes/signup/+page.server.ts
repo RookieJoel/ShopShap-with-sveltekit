@@ -19,6 +19,7 @@ export const actions = {
     }
 
     await connectDB();
+
     const existing = await User.findOne({ email });
     if (existing) {
       return fail(400, { message: 'User already exists' });
@@ -28,15 +29,18 @@ export const actions = {
     }
     const hashed = await bcrypt.hash(password, 10);
     try {
-      const user = await User.create({ email, password: hashed });
-       cookies.set('user', String(user._id), {
+      const user = await User.create({ email, password: hashed , name});
+      console.log('User created:', user);
+      cookies.set('user', String(user._id), {
       path: '/',
       httpOnly: true,
       maxAge: 60 * 60 * 1,
     });
-      throw redirect(303, '/');
-    } catch (err) {
-      return fail(400, { message: 'User already exists' });
+
+    }catch (err: any) {
+      return fail(400, { message: err.message});
     }
-  }
+
+    throw redirect(303, '/login');
+    }
 };
