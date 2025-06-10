@@ -1,12 +1,11 @@
-<script> 
-    import "../app.css";
-  import Hero from "../components/Hero.svelte";
+<script lang="ts"> 
+  import "../app.css";
   import Nav from "../components/Nav.svelte";
-  import Header from "../components/Nav.svelte";
   import Footer from "../components/Footer.svelte";
+  export let data ;
 </script>
 
-<Nav />
+<Nav user={data.user} />
   <slot />
 
   <Footer />

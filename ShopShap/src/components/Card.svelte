@@ -1,11 +1,12 @@
 <script lang="ts">
+    export let id: number;
     export let title: string = '';
     export let description: string = '';
     export let price: string | number = '';
     export let images: string = '';
 </script>
 
-<div class="max-w-sm rounded overflow-hidden shadow-lg m-4">
+<div class="max-w-sm rounded overflow-hidden shadow-lg m-4 cursor-pointer" on:click={() => window.location.href = `/products/${id}`} tabindex="0" role="button">
     <img class="w-full" src={images} alt={title}>
     <div class="px-6 py-4">
         <div class="font-bold text-xl mb-2">{title}</div>

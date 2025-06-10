@@ -6,4 +6,4 @@ const User_Schema = new mongoose.Schema({
 	name: { type: String, required: true }
 });
 
-export const User_Model = mongoose.model("User", User_Schema);
+export const User = mongoose.models.User || mongoose.model("User", User_Schema);
