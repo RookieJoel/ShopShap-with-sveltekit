@@ -4,9 +4,10 @@
   import Nav from "../components/Nav.svelte";
   import Header from "../components/Nav.svelte";
   import Footer from "../components/Footer.svelte";
+  export let data: { user: string | null };
 </script>
 
-<Nav />
+<Nav user={data.user} />
   <slot />
 
   <Footer />
