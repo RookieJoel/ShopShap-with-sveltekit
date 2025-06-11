@@ -1,6 +1,4 @@
-<script>
-  // About page for Shop Shap
-</script>
+
 
 <section class="min-h-[60vh] flex flex-col items-center justify-center bg-gradient-to-br from-pink-50 to-indigo-100 py-16 px-4">
   <div class="max-w-2xl mx-auto text-center">

@@ -1,7 +1,6 @@
 <script lang="ts">
     export let user: { name: string } | null = null;
     let navOpen = false;
-    console.log("User in Nav:", user);
 </script>
 
 <nav class="bg-gray-800">

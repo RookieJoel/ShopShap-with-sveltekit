@@ -8,7 +8,8 @@ export const handle: Handle = async ({ event, resolve }) => {
   const token = event.cookies.get('token');
   if (token) {
     try {
-      const payload = jwt.verify(token, JWT_SECRET) as { userId: string };
+      const payload = jwt.verify(token, JWT_SECRET);
+      // console.log('User ID from token:', payload);
       await connectDB();
       const user = await User.findById(payload.userId);
       if (user) {
@@ -17,6 +18,7 @@ export const handle: Handle = async ({ event, resolve }) => {
           name: user.name,
           email: user.email
         };
+        // console.log('User found:', event.locals.user);
       } else {
         event.locals.user = null;
       }
