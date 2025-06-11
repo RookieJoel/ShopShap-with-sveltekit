@@ -32,7 +32,8 @@
             </div>
                 <div class="hidden md:flex items-center gap-4 ml-6">
                     {#if user}
-                        <span class="text-gray-300">Hi, {user.name}</span>
+                        <img src="https://placehold.co/40x40" alt="User Avatar" class="rounded-full w-8 h-8 mr-2" />
+                        <span class="text-gray-300">{user.name.toUpperCase()}</span>
                         <a href="/logout" class="px-4 py-2 rounded bg-gray-700 text-white font-semibold hover:bg-gray-600 transition">Sign Out</a>
                     {:else}
                         <a href="/login" class="px-4 py-2 rounded bg-sky-500 text-white font-semibold hover:bg-sky-600 transition">Log In</a>

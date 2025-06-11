@@ -1,13 +1,16 @@
 import type { Handle } from '@sveltejs/kit';
 import { connectDB } from '$lib/server/db';
 import { User } from '$lib/server/models/user';
+import jwt from 'jsonwebtoken';
+import { JWT_SECRET } from '$env/static/private';
 
 export const handle: Handle = async ({ event, resolve }) => {
-  const id = event.cookies.get('user');
-  if (id) {
-    await connectDB();
+  const token = event.cookies.get('token');
+  if (token) {
     try {
-      const user = await User.findById(id);
+      const payload = jwt.verify(token, JWT_SECRET) as { userId: string };
+      await connectDB();
+      const user = await User.findById(payload.userId);
       if (user) {
         event.locals.user = {
           id: String(user._id),
