@@ -2,6 +2,8 @@ import { fail, redirect } from '@sveltejs/kit';
 import bcrypt from 'bcryptjs';
 import { connectDB } from '$lib/server/db';
 import { User } from '$lib/server/models/user';
+import jwt from 'jsonwebtoken';
+import { JWT_SECRET } from '$env/static/private';
 
 export const actions = {
   login: async ({ request, cookies }) => {
@@ -20,7 +22,9 @@ export const actions = {
     if (!valid) {
       return fail(400, { message: 'Invalid credentials' });
     }
-    cookies.set('user', String(user._id), { path: '/' });
+    const token = jwt.sign({ userId: user._id }, JWT_SECRET, { expiresIn: '1h' });
+    cookies.set('token', token, { path : '/', httpOnly: true, maxAge: 3600 });
+
     throw redirect(303, '/');
   }
 };
