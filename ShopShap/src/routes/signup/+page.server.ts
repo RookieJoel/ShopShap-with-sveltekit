@@ -2,6 +2,8 @@ import { fail, redirect } from '@sveltejs/kit';
 import bcrypt from 'bcryptjs';
 import { connectDB } from '$lib/server/db';
 import { User } from '$lib/server/models/user';
+import { JWT_SECRET } from '$env/static/private';
+import jwt from 'jsonwebtoken';
 
 export const actions = {
   default: async ({ request, cookies }) => {
@@ -31,11 +33,9 @@ export const actions = {
     try {
       const user = await User.create({ email, password: hashed , name});
       console.log('User created:', user);
-      cookies.set('user', String(user._id), {
-      path: '/',
-      httpOnly: true,
-      maxAge: 60 * 60 * 1,
-    });
+      const token = jwt.sign({ userId: user._id }, JWT_SECRET, { expiresIn: '1h' });
+      console.log('Token generated:', token);
+      cookies.set('token', token, { path: '/', httpOnly: true, maxAge: 3600 });
 
     }catch (err: any) {
       return fail(400, { message: err.message});
