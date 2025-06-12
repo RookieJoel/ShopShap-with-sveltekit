@@ -1,12 +1,12 @@
 import { redirect } from '@sveltejs/kit';
 import { OAuth2Client } from 'google-auth-library';
-import { GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET, REDIRECT_URI, JWT_SECRET } from '$env/static/private';
+import { GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET, JWT_SECRET } from '$env/static/private';
 import { connectDB } from '$lib/server/db';
 import { User } from '$lib/server/models/user';
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 
-const client = new OAuth2Client(GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET, REDIRECT_URI);
+const client = new OAuth2Client(GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET, "http://localhost:5173/oauth/callback");
 
 export const GET = async ({ url, cookies }) => {
   const code = url.searchParams.get('code');
