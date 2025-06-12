@@ -7,7 +7,7 @@ import jwt from 'jsonwebtoken';
 import { OAuth2Client } from 'google-auth-library';
 import { GOOGLE_CLIENT_ID ,GOOGLE_CLIENT_SECRET } from '$env/static/private';
 
-const client = new OAuth2Client();
+const client = new OAuth2Client
 
 export const actions = {
   default: async ({ request, cookies }) => {
