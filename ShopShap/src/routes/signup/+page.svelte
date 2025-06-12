@@ -23,3 +23,5 @@
   
   <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">Sign Up</button>
 </form>
+
+<a href="/Oauth" class="block bg-red-500 text-white px-4 py-2 rounded mt-4 text-center">Sign up with Google</a>
