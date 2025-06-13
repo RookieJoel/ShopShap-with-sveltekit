@@ -26,7 +26,7 @@ const features = [
   {
     title: 'Fast Shipping',
     description: 'Orders are processed quickly so you can start your workouts sooner.',
-    icon: 'https://img.icons8.com/ios-filled/50/000000/fast-cart.png'
+    icon: 'https://img.icons8.com/?size=100&id=60998&format=png&color=000000'
   },
   {
     title: 'Friendly Support',
