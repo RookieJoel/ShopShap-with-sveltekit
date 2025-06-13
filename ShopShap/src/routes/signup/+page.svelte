@@ -2,10 +2,11 @@
   export let form: any;
 </script>
 
-<form method="POST" class="max-w-md mx-auto p-4 space-y-4">
-  <h1 class="text-2xl font-bold">Sign Up</h1>
+<section class="min-h-screen flex items-center justify-center bg-gradient-to-br from-sky-50 to-indigo-100 py-8">
+<form method="POST" class="w-full max-w-md space-y-4 rounded-xl bg-white p-8 shadow-xl">
+  <h1 class="text-center text-3xl font-extrabold text-blue-700 mb-4">Sign Up</h1>
   {#if form?.message}
-    <p class="text-red-500">{form.message}</p>
+    <p class="text-center text-red-500">{form.message}</p>
   {/if}
   <div>
   <label>Name</label>
@@ -21,13 +22,21 @@
     <input type="password" name="password" class="border p-2 w-full" required />
   </div>
   
-  <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">Sign Up</button>
+  <button type="submit" class="w-full rounded bg-blue-600 px-4 py-2 font-bold text-white hover:bg-blue-700">Sign Up</button>
   <a
-  href="/oauth"
-  class="flex items-center justify-center w-full !bg-red-500 border border-gray-300 rounded px-4 py-2 mt-4 text-gray-700 hover:bg-gray-100 transition"
-  style="gap: 0.5rem;"
->
-  <img src="https://www.svgrepo.com/show/475656/google-color.svg" alt="Google logo" class="w-5 h-5" style="background: white; border-radius: 2px;" />
-  <span>Sign up with Google</span>
-</a>
+    href="/oauth"
+    class="mt-2 flex w-full items-center justify-center gap-2 rounded border border-gray-300 bg-red-500 px-4 py-2 text-gray-700 hover:bg-gray-100 transition"
+  >
+    <img
+      src="https://www.svgrepo.com/show/475656/google-color.svg"
+      alt="Google logo"
+      class="h-5 w-5"
+      style="background: white; border-radius: 2px;"
+    />
+    <span>Sign up with Google</span>
+  </a>
+  <div class="mt-4 text-center">
+    <a href="/login" class="text-blue-600 underline hover:text-blue-800">Already have an account? Log In</a>
+  </div>
 </form>
+</section>
