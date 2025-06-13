@@ -1,25 +1,25 @@
-export function load({ params }) {
+import axios from "axios";
+import { error } from "@sveltejs/kit";
+
+export async function load({ params }) {
     try {
         const { id } = params;
-        console.log(params);
-        console.log("Product ID:", id);
+        const response = await axios.get(`https://dummyjson.com/products/${id}`);
 
+        const p = response.data;
         const productDetails = {
-            id,
-            name: `Product ${id}`,
-            description: `Description for product ${id}`,
-            price: (Math.random() * 100).toFixed(2),
-            image: `https://via.placeholder.com/150?text=Product+${id}`
+            id: p.id,
+            title: p.title,
+            description: p.description,
+            price: p.price,
+            images: p.images[0]
         };
 
         return {
             product: productDetails
         };
-    } catch (error) {
-        console.error("Error loading product:", error);
-        return {
-            product: null,
-            error: "Failed to load product details."
-        };
+    } catch (err) {
+        console.error("Error loading product:", err);
+        throw error(500, "Failed to load product details.");
     }
 }
