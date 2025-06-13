@@ -7,7 +7,7 @@
     <div class="w-full px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-16">
             <div class="flex items-center">
-                <img src="https://placehold.co/40x40" alt="Gym Jum Logo" class="mr-4 rounded-full my-2" />
+                <img src="/logo.png" alt="Gym Jum Logo" class="mr-4 rounded-full my-2 h-[50px] w-[50px]" />
                 <a href="/"  class="text-white font-bold text-xl">Shop <span class="text-sky-300 font-extrabold">Shap</span></a>
                 <div class="hidden md:block ml-10 ">
                     <div class="flex space-x-4 justify-center">
