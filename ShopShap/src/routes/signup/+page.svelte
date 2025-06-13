@@ -25,7 +25,7 @@
   <button type="submit" class="w-full rounded bg-blue-600 px-4 py-2 font-bold text-white hover:bg-blue-700">Sign Up</button>
   <a
     href="/oauth"
-    class="mt-2 flex w-full items-center justify-center gap-2 rounded border border-gray-300 bg-red-500 px-4 py-2 text-gray-700 hover:bg-gray-100 transition"
+    class="mt-2 flex w-full items-center justify-center gap-2 rounded border border-gray-300 bg-red-400 px-4 py-2 text-gray-700 hover:bg-gray-100 transition text-amber-50"
   >
     <img
       src="https://www.svgrepo.com/show/475656/google-color.svg"

@@ -17,7 +17,7 @@
     </div>
     <div class="px-6 pt-4 pb-2">
         <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-            Add to Cart
+            View more
         </button>
     </div>
 </div>
