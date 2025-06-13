@@ -2,7 +2,7 @@
     const year = new Date().getFullYear();
 </script>
 
-<footer class="bg-gray-800 text-white py-8 px-4 text-center w-full shadow-[0_-2px_16px_rgba(0,0,0,0.10)]">
+<footer class="mt-auto bg-gray-800 text-white py-8 px-4 text-center w-full shadow-[0_-2px_16px_rgba(0,0,0,0.10)]">
     <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
         <div class="flex items-center gap-3 justify-center">
             <svg class="w-7 h-7 text-blue-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">

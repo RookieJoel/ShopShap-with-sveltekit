@@ -1,6 +1,6 @@
 
 
-<section class="min-h-[60vh] flex flex-col items-center justify-center bg-gradient-to-br from-pink-50 to-indigo-100 py-16 px-4">
+<section class="min-h-[60vh] flex flex-col items-center justify-center bg-gradient-to-br from-pink-50 to-indigo-100 py-16 px-4 h-[100vh]">
   <div class="max-w-2xl mx-auto text-center">
     <h1 class="text-4xl font-bold mb-4 text-pink-900">About Shop Shap</h1>
     <p class="text-lg text-gray-700 mb-6">
