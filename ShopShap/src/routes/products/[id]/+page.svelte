@@ -1,30 +1,38 @@
 <script lang="ts">
-import Card from "../../../components/Card.svelte";
-export let data: { 
-    product: { 
-        id: string; 
-        title: string; 
-        description: string; 
-        image: string; 
-        price: number; 
-    }
-};
-const products = data.product;
-console.log(data.product)
+  export let data: {
+    product: {
+      id: number;
+      title: string;
+      description: string;
+      price: number;
+      images: string;
+    };
+  };
 
+  const product = data.product;
+
+  function back() {
+    window.location.href = '/products';
+  }
 </script>
 
-<div>
-    <h1 class="font-extrabold">{data.product.title}</h1>
-    <div class="flex flex-col items-center justify-center min-h-screen bg-gray-100">
-        <Card 
-         {...products}
-        />
-        <button class="mt-6 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors" onclick={() => window.location.href = '/products'}>
-            Back to Products
+<section class="min-h-screen flex items-center justify-center bg-gradient-to-br from-sky-50 to-indigo-100 py-8">
+  <div class="max-w-4xl bg-white rounded-xl shadow-lg overflow-hidden md:flex">
+    <img src={product.images} alt={product.title} class="h-64 w-full object-cover md:h-auto md:w-1/2" />
+    <div class="p-8 flex flex-col justify-between">
+      <div>
+        <h1 class="text-2xl font-bold mb-4">{product.title}</h1>
+        <p class="text-gray-700 mb-4">{product.description}</p>
+        <p class="text-xl font-semibold text-gray-900">${product.price}</p>
+      </div>
+      <div class="mt-6 flex gap-4">
+        <button class="bg-blue-600 hover:bg-blue-700 text-white font-bold px-4 py-2 rounded" on:click={back}>
+          Back to Products
         </button>
+        <button class="bg-emerald-500 hover:bg-emerald-600 text-white font-bold px-4 py-2 rounded">
+          Buy Now
+        </button>
+      </div>
     </div>
-    <div class="flex justify-center mt-8">
-        <img src="https://placehold.co/600x400" alt="Product Image" class="rounded-lg shadow-lg" />
-    </div>
-</div>
+  </div>
+</section>
