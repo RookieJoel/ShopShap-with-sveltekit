@@ -9,19 +9,7 @@
     };
   };
 
-  import { cart } from '$lib/stores/cart';
-
   const product = data.product;
-
-  async function addToCart() {
-    const item = { id: product.id, title: product.title, price: product.price, images: product.images, quantity: 1 };
-    cart.add(item);
-    await fetch('/api/cart', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(item)
-    });
-  }
 
   function back() {
     window.location.href = '/products';
@@ -41,8 +29,8 @@
         <button class="bg-blue-600 hover:bg-blue-700 text-white font-bold px-4 py-2 rounded" on:click={back}>
           Back to Products
         </button>
-        <button class="bg-emerald-500 hover:bg-emerald-600 text-white font-bold px-4 py-2 rounded" on:click={addToCart}>
-          Add to Cart
+        <button class="bg-emerald-500 hover:bg-emerald-600 text-white font-bold px-4 py-2 rounded">
+          Buy Now
         </button>
       </div>
     </div>
