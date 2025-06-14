@@ -14,7 +14,6 @@
                         <a href="/" class="text-gray-300 hover:text-sky-300 transition-colors duration-[500ms] px-3 py-2 rounded-md text-sm font-medium">Home</a>
                         <a href="/products" class="text-gray-300 hover:text-sky-300 transition-colors duration-[500ms] px-3 py-2 rounded-md text-sm font-medium">Products</a>
                         <a href="/about" class="text-gray-300 hover:text-sky-300 transition-colors duration-[500ms] px-3 py-2 rounded-md text-sm font-medium">About</a>
-                        <a href="/checkout" class="text-gray-300 hover:text-sky-300 transition-colors duration-[500ms] px-3 py-2 rounded-md text-sm font-medium">Checkout</a>
                     </div>
                 </div>
             </div>
@@ -47,7 +46,6 @@
             <a href="/" class="block text-gray-300 hover:text-sky-300 transition-colors duration-[2000ms] px-3 py-2 rounded-md text-base font-medium">Home</a>
             <a href="/products" class="block text-gray-300 hover:text-sky-300 transition-colors duration-[2000ms] px-3 py-2 rounded-md text-base font-medium">Products</a>
             <a href="/about" class="block text-gray-300 hover:text-sky-300 transition-colors duration-[2000ms] px-3 py-2 rounded-md text-base font-medium">About</a>
-            <a href="/checkout" class="block text-gray-300 hover:text-sky-300 transition-colors duration-[2000ms] px-3 py-2 rounded-md text-base font-medium">Checkout</a>
             {#if user}
                 <span class="block text-gray-300 px-3">{user.name}</span>
                 <a href="/logout" class="block text-white bg-gray-700 font-semibold rounded px-3 py-2 mt-1">Sign Out</a>
