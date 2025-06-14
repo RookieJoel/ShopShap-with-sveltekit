@@ -76,6 +76,7 @@ const testimonials = [
     description={description}
     price={price}
     images={images}
+    userId={data.user?.id}
   />
 {/each}
 </section>
