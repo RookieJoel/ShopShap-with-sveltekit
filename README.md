@@ -9,6 +9,7 @@ This mini-project is a personal playground for practicing full‑stack developme
 - **MongoDB** with Mongoose for data storage
 - User authentication with JWT tokens and Google OAuth
 - Fetches product data from [DummyJSON](https://dummyjson.com/)
+- Shopping cart with per-user checkout page
 
 ## Getting Started
 
