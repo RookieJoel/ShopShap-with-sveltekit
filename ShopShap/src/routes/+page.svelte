@@ -59,6 +59,10 @@ const testimonials = [
 
 </script>
 
+<svelte:head>
+  <title>Shop Shap</title>
+</svelte:head>
+
 <Hero />
 
 <Features {features} />
