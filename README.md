@@ -2,6 +2,11 @@
 
 This mini-project is a personal playground for practicing full‑stack development using **SvelteKit**. It covers both the frontend and backend aspects of an e‑commerce style application.
 
+## Preview
+
+![ShopShap Preview](static/preview.png)
+
+
 ## Features
 
 - **SvelteKit** powered frontend using TypeScript
