@@ -4,7 +4,7 @@ This mini-project is a personal playground for practicing full‑stack developme
 
 ## Preview
 
-![ShopShap Preview](static/preview.png)
+![ShopShap Preview](ShopShap/static/preview.png)
 
 
 ## Features
